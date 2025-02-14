@@ -53,4 +53,152 @@ public class pattern{
     }
     }
     }
+*******************************************
+2.input=5
+
+ABCDE
+ABCDE
+ABCDE
+ABCDE
+ABCDE
 ******************************************
+input=5
+*****
+*   *
+*   *
+*   *
+*****
+import java.util.*;
+import java.util.Scanner;
+public class pattern{
+    public static void main(String[] args){
+        Scanner obj = new Scanner(System.in);
+        int num = obj.nextInt();
+      for(int row=1;row<=num;row++){
+        for(int col=1;col<=num;col++){
+            if(row==1||col == 1||row==num||col ==num)
+            System.out.print("*");
+            else
+            System.out.print(" ");
+        }
+        System.out.println();
+    }
+}
+}
+********************************************
+input=5
+*
+* *
+*   *
+*      *
+* * * * *
+
+import java.util.*;
+import java.util.Scanner;
+public class pattern{
+    public static void main(String[] args){
+        Scanner obj = new Scanner(System.in);
+        int num = obj.nextInt();
+       for(int row=1;row<=num;row++){
+        for(int col=1;col<=num;col++){
+            if(col==1||row==num||col==row )
+            System.out.print("*");
+            else 
+            System.out.print(" ");
+        }
+        System.out.println();
+    }
+}
+}
+***********************************************
+input=5
+
+
+1 1 1 1 1 1 1 1 1
+1 2 2 2 2 2 2 2 1
+1 2 3 3 3 3 3 2 1
+1 2 3 4 4 4 3 2 1
+1 2 3 4 5 4 3 2 1
+1 2 3 4 4 4 3 2 1
+1 2 3 3 3 3 3 2 1
+1 2 2 2 2 2 2 2 1
+1 1 1 1 1 1 1 1 1
+
+import java.util.*;
+import java.util.Scanner;
+public class pattern{
+    public static void main(String[] args){
+        Scanner obj = new Scanner(System.in);
+        int num = obj.nextInt();
+        int limit = 2*num-1;
+    for(int row =1;row<=limit;row++){
+        for(int col=1;col<=limit;col++){
+            if((row+col)<=num*2){
+            if(row>col)
+            System.out.print(col);
+            else
+            System.out.print(row);
+            }
+            else if((row+col)>num*2){
+                    int n = row;
+                    int m = col;
+                    n = (num*2)-n;
+                    m = (num*2)-m;
+                if(n>m)
+                System.out.print(m);
+                else
+                System.out.print(n);
+                }
+            }
+            System.out.println();
+        }
+}}
+***************************************************
+input=5
+*   *
+ * *
+  *
+ * *
+*   *
+
+import java.util.*;
+import java.util.Scanner;
+public class pattern{
+    public static void main(String[] args){
+        Scanner obj = new Scanner(System.in);
+        int num = obj.nextInt();
+        for(int row=1;row<=num;row++){
+            for(int col=1;col<=num;col++){
+                if(row==col||row+col==num+1)
+                System.out.print("*");
+                else
+                System.out.print(" ");
+            }
+            System.out.println();
+        }
+}}
+***************************************************
+input=3
+1   5
+ 2 4
+  3
+ 2 4
+1   5
+
+import java.util.*;
+import java.util.Scanner;
+public class pattern{
+    public static void main(String[] args){
+        Scanner obj = new Scanner(System.in);
+        int num = obj.nextInt();
+         for(int row=1;row<=num;row++){
+            for(int col=1;col<=num;col++){
+            if(row==col||row+col==num+1)
+            System.out.print(row);
+            else
+            System.out.print(" ");
+        }
+        System.out.println();
+    }
+}}
+**************************************************
