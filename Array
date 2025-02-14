@@ -68,3 +68,109 @@ int min = arr[0];
         System.out.println("The minimum value in the array is: " + min);
 }
 ***************************************************************
+Q5.Write a program to find sum of the array
+import java.util.*;
+public class Array {
+    public static void main(String[] args){
+        Scanner obj = new Scanner(System.in);
+        int size = obj.nextInt();
+        int arr[] = new int[size];
+        for(int i=0;i<size;i++){
+        arr[i] = obj.nextInt();
+        }
+        int sum = 0;
+        for(int i=0;i<size;i++){
+            sum = sum+arr[i];
+        }
+        System.out.println(sum);
+}
+}
+*************************************************************
+Q6.Write a program to search an element in the given array and print the searched elements index. If no such elements were found print -1
+import java.util.*;
+public class Array {
+    public static void main(String[] args){
+        Scanner obj = new Scanner(System.in);
+        int size = obj.nextInt();
+        int arr[] = new int[size];
+        for(int i=0;i<size;i++){
+        arr[i] = obj.nextInt();
+        }
+int key = obj.nextInt();
+            boolean found = false;
+            for(int i=0;i<size;i++){
+                if(arr[i]==key){
+                    System.out.println(i);
+                    found = true;
+                    return;
+                }
+            }
+            if(!found)
+            System.out.println("-1");
+}
+}
+*******************************************************
+Q7.You are given an array of 0s and 1s in random order. Segregate 0s on left side and 1s on right side of the array . 
+            Input array   =  [0, 1, 0, 1, 0, 0, 1, 1, 1, 0] 
+            Output array =  [0, 0, 0, 0, 0, 1, 1, 1, 1, 1]
+import java.util.*;
+public class Array {
+    public static void main(String[] args){
+        Scanner obj = new Scanner(System.in);
+        int size = obj.nextInt();
+        int arr[] = new int[size];
+        for(int i=0;i<size;i++){
+        arr[i] = obj.nextInt();
+        }
+Arrays.sort(arr);
+            System.out.println(Arrays.toString(arr));
+}
+}
+****************************************************
+Q8.Write a program  to replace the array elements with sum of other  elements
+import java.util.*;
+public class Array {
+    public static void main(String[] args){
+        Scanner obj = new Scanner(System.in);
+        int size = obj.nextInt();
+        int arr[] = new int[size];
+        for(int i=0;i<size;i++){
+        arr[i] = obj.nextInt();
+        }
+Scanner obj = new Scanner(System.in);
+            int size = obj.nextInt();
+            int arr[] = new int[size];
+            int sum = 0;
+            for(int i=0;i<size;i++){
+                arr[i] = obj.nextInt();
+                sum = sum + arr[i];
+            }
+            for(int i=0;i<size;i++){
+                arr[i] = sum - arr[i];
+                System.out.println(arr[i]+" ");
+            }
+}
+*************************************************
+Q9.Write a program  to insert the value at given position in the array.
+import java.util.*;
+public class Array {
+    public static void main(String[] args){
+        Scanner obj = new Scanner(System.in);
+        int size = obj.nextInt();
+        int arr[] = new int[size];
+        for(int i=0;i<size;i++){
+        arr[i] = obj.nextInt();
+        }
+System.out.println("Enter the value : ");
+            int value = obj.nextInt();
+            System.out.println("Enter the position : ");
+            int pos = obj.nextInt();
+            for(int i=size;i>pos;i--){
+                arr[i] = arr[i-1];
+            }
+            arr[pos] = value;
+            System.out.println("Insert the array element is :"+Arrays.toString(arr));
+}
+}
+************************************************
+Q10.Write a program  to delete the value at given position from the array.
