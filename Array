@@ -1,0 +1,70 @@
+Q1.Write a program to accept N values into an integer array and display the contents
+import java.util.*;
+public class Array {
+    public static void main(String[] args){
+        Scanner obj = new Scanner(System.in);
+        int size = obj.nextInt();
+        int arr[] = new int[size];
+        for(int i=0;i<size;i++){
+        arr[i] = obj.nextInt();
+        }
+        for(int i=0;i<size;i++){
+            System.out.println(arr[i]+" ");
+}
+}
+******************************************************
+Q2.Write a program to accept N values into an integer array and display in the reverse order
+import java.util.*;
+public class Array {
+    public static void main(String[] args){
+        Scanner obj = new Scanner(System.in);
+        int size = obj.nextInt();
+        int arr[] = new int[size];
+        for(int i=0;i<size;i++){
+        arr[i] = obj.nextInt();
+        }
+for(int i=size-1;i>=0;i--){
+            System.out.println(arr[i]+" ");
+        }
+}
+***************************************************
+Q3. Write a  program to print the count of the elements in an array whose values are lesser than a key element in an unsorted array.
+import java.util.*;
+public class Array {
+    public static void main(String[] args){
+        Scanner obj = new Scanner(System.in);
+        int size = obj.nextInt();
+        int arr[] = new int[size];
+        for(int i=0;i<size;i++){
+        arr[i] = obj.nextInt();
+        }
+System.out.println("Enter the key element : ");
+        int key = obj.nextInt();
+        int count = 0;
+        for(int i=0;i<size;i++){
+            if(arr[i]<key){
+            count++;
+            }
+        }
+        System.out.println("count of elements lesser than " + key + " is: " + count);*/
+        }
+****************************************************************
+Q4.Write a program to find minimum of the array
+import java.util.*;
+public class Array {
+    public static void main(String[] args){
+        Scanner obj = new Scanner(System.in);
+        int size = obj.nextInt();
+        int arr[] = new int[size];
+        for(int i=0;i<size;i++){
+        arr[i] = obj.nextInt();
+        }
+int min = arr[0];
+        for(int i=0;i<size;i++){
+            if(arr[i]<min){
+                min = arr[i];
+            }
+        }
+        System.out.println("The minimum value in the array is: " + min);
+}
+***************************************************************
